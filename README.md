@@ -5,5 +5,7 @@ Teaching material for POI data integration &amp; analytics with the SLIPO Workbe
 
 ## Examples
 
+## Notebooks
+
 ## License
 
