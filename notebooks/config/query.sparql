@@ -1,0 +1,100 @@
+PREFIX slipo: <http://slipo.eu/def#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+SELECT ?uri ?id ?source ?lon ?lat ?the_geom ?length_m ?area_m2 ?category ?generic_category (group_concat(distinct ?name_any;separator="; ") as ?name) ?description (group_concat(distinct ?phone_num;separator="; ") as ?phone) (group_concat(distinct ?fax_num;separator="; ") as ?fax) (group_concat(distinct ?email_addr;separator="; ") as ?email) ?homepage (group_concat(distinct ?street_name;separator="; ") as ?street) ?street_num ?postCode ?locality ?country ?open_hours ?wikipedia ?image ?confScore ?attrGain
+WHERE { 
+		OPTIONAL {
+			?uri slipo:source ?poiSourceInfo .
+		    OPTIONAL { ?poiSourceInfo slipo:sourceRef ?source . }
+			?poiSourceInfo slipo:poiRef ?id .
+		}	
+		
+		OPTIONAL {
+			?uri slipo:lastUpdated ?timestamp .
+		}
+		
+		OPTIONAL {
+			?uri slipo:category ?category_uri .
+			?category_uri slipo:value ?category .
+		}
+		
+		OPTIONAL {
+			?uri slipo:assignedCategory ?generic_category .
+		}
+		
+		OPTIONAL {
+			?uri geo:hasGeometry ?geometry .
+			?geometry geo:asWKT ?the_geom .
+		}
+
+		OPTIONAL {
+			?uri geo:hasGeometry ?geometry .
+			?geometry geo:asWKT ?the_geom .
+                        OPTIONAL { ?uri slipo:length ?length_m .}
+                        OPTIONAL { ?uri slipo:area ?area_m2 .}
+		}
+		
+		OPTIONAL {
+			?uri slipo:address ?address .
+			OPTIONAL { ?address slipo:street ?street_name . }
+			OPTIONAL { ?address slipo:number ?street_num . }
+			OPTIONAL { ?address slipo:postcode ?postCode . }
+			OPTIONAL { ?address slipo:locality ?locality . }
+			OPTIONAL { ?address slipo:country ?country . }
+		}
+
+		OPTIONAL {
+			?uri slipo:name ?fName . 
+			?fName slipo:nameValue ?name_any .
+			FILTER NOT EXISTS { ?fName slipo:nameType "transliterated" } .
+		}
+		
+		OPTIONAL {?uri slipo:description ?description . }
+		
+		OPTIONAL {?uri slipo:homepage ?homepage . }
+	
+		OPTIONAL {?uri slipo:otherLink ?wikipedia . }
+
+		OPTIONAL {?uri slipo:openingHours ?slot_uri .
+		     ?slot_uri slipo:concat ?open_hours .
+		}
+
+		OPTIONAL {?uri slipo:media ?media_uri .
+		     ?media_uri slipo:url ?image .
+		}
+		
+		OPTIONAL {?uri wgs84:long ?lon . }
+		OPTIONAL {?uri wgs84:lat ?lat . }
+		
+		OPTIONAL {
+			?uri slipo:phone ?phone_uri .
+			?phone_uri slipo:contactValue ?phone_num .
+		}
+		
+		OPTIONAL {
+			?uri slipo:fax ?fax_uri .
+			?fax_uri slipo:contactValue ?fax_num .
+		}
+		
+		OPTIONAL {
+			?uri slipo:email ?email_uri .
+			?email_uri slipo:contactValue ?email_addr .
+		}	
+		
+		OPTIONAL { ?uri slipo:distanceToNearestBuilding ?distanceToNearestBuilding . }
+		OPTIONAL { ?uri slipo:nearestBuildingFloorArea ?nearestBuildingFloorArea . }
+		OPTIONAL { ?uri slipo:nearestBuildingFloorCount ?nearestBuildingFloorCount . }
+		OPTIONAL { ?uri slipo:nearestBuildingName ?nearestBuildingName . }
+		OPTIONAL { ?uri slipo:nearestBuildingOpeningDate ?nearestBuildingOpeningDate .}
+		OPTIONAL { ?uri slipo:nearestBuildingStatus ?nearestBuildingStatus . }
+
+		OPTIONAL {
+			?uri slipo:fusion-confidence ?confScore .
+		}
+
+		OPTIONAL {
+			?uri slipo:fusion-gain ?attrGain .
+		}		
+	}
+GROUP BY ?uri ?id ?source ?lon ?lat ?the_geom ?length_m ?area_m2 ?category ?generic_category ?description ?homepage ?street_num ?postCode ?locality ?country ?open_hours ?wikipedia ?image ?confScore ?attrGain
