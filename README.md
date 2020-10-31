@@ -52,4 +52,4 @@ The contents of this tutorial are licensed under the [Apache License 2.0](https:
 
 ## Acknowledgement
 
-This software is being developed in the context of the [SLIPO](https://slipo.eu/) project. This project has received funding from the European Union’s [Horizon 2020 research and innovation programme](https://ec.europa.eu/programmes/horizon2020/en) under grant agreement No 731581.
+This software is being developed in the context of the [SLIPO](http://slipo.eu/) project. This project has received funding from the European Union’s [Horizon 2020 research and innovation programme](https://ec.europa.eu/programmes/horizon2020/en) under grant agreement No 731581.
