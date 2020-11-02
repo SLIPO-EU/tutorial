@@ -29,13 +29,13 @@ The tutorial requires no particular knowledge of POI data concepts and practices
 
 ## Interacting with SLIPO at HELIX Lab
 
-We can provide free access to [HELIX Lab](https://lab.hellenicdataservice.gr/) for 15 days to interested users, so they can avoid deploying notebooks in their own systems and ensuring that all required libraries for SLIPO are in place. Once connected to HELIX Lab, they can submit requests concerning POI data integration with the [SLIPO API](https://app.dev.slipo.eu/docs/webapp-api/index.html) and spatial analytics with [LOCI](https://github.com/SLIPO-EU/loci).
+We can provide free access to [HELIX Lab](https://lab.hellenicdataservice.gr/) for 15 days to interested users, so they can avoid deploying notebooks in their own systems and ensuring that all required libraries for SLIPO are in place. Once connected to HELIX Lab, users can submit requests concerning POI data integration with the [SLIPO API](https://app.dev.slipo.eu/docs/webapp-api/index.html) and spatial analytics with [LOCI](https://github.com/SLIPO-EU/loci).
 
-Follow these [instructions]() in order to ask for your free registration to HELIX Lab. Once your account is confirmed, you can start interacting with SLIPO via Jupyter notebooks even with your own POI data.
+Follow these [instructions](https://drive.google.com/file/d/1dIoz97eBScDDx9P0aMh7chIbmqJxJwBa/view?usp=sharing) in order to ask for your free registration to HELIX Lab. Once your account is confirmed, you can start interacting with SLIPO via Jupyter notebooks even with your own POI data.
 
 ## Local installation
 
-TBC
+Please consult these [instructions](https://github.com/SLIPO-EU/workbench/blob/master/INSTALL.md) if you wish to install and launch SLIPO in your own infrastructure.
 
 
 ## Publications
