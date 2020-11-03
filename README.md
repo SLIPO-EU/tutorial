@@ -29,9 +29,11 @@ The tutorial requires no particular knowledge of POI data concepts and practices
 
 ## Interacting with SLIPO at HELIX Lab
 
-We can provide free access to [HELIX Lab](https://lab.hellenicdataservice.gr/) for 15 days to interested users, so they can avoid deploying notebooks in their own systems and ensuring that all required libraries for SLIPO are in place. Once connected to HELIX Lab, users can submit requests concerning POI data integration with the [SLIPO API](https://app.dev.slipo.eu/docs/webapp-api/index.html) and spatial analytics with [LOCI](https://github.com/SLIPO-EU/loci).
+We can provide free access to [HELIX Lab](https://lab.hellenicdataservice.gr/) for 15 days to interested users, so they can avoid deploying notebooks in their own systems and ensuring that all required libraries for SLIPO are in place. 
 
-Follow these [instructions](https://drive.google.com/file/d/1dIoz97eBScDDx9P0aMh7chIbmqJxJwBa/view?usp=sharing) in order to ask for your free registration to HELIX Lab. Once your account is confirmed, you can start interacting with SLIPO via Jupyter notebooks even with your own POI data.
+Once connected to HELIX Lab, users can submit requests concerning POI data integration with the [SLIPO API](https://app.dev.slipo.eu/docs/webapp-api/index.html) and spatial analytics with [LOCI](https://github.com/SLIPO-EU/loci). We have prepared several Jupyter [notebooks](notebooks) to showcase the provided functionality with a wide range of examples.
+
+Follow these [instructions](https://drive.google.com/file/d/1dIoz97eBScDDx9P0aMh7chIbmqJxJwBa/view?usp=sharing) if you wish to get your free registration to HELIX Lab. Once your account is confirmed, you can start interacting with SLIPO via Jupyter notebooks even with your own POI data.
 
 ## Local installation
 
@@ -52,4 +54,4 @@ The contents of this tutorial are licensed under the [Apache License 2.0](https:
 
 ## Acknowledgement
 
-This software is being developed in the context of the [SLIPO](http://slipo.eu/) project. This project has received funding from the European Union’s [Horizon 2020 research and innovation programme](https://ec.europa.eu/programmes/horizon2020/en) under grant agreement No 731581.
+This software has been developed in the context of the [SLIPO](http://slipo.eu/) project. The project has received funding from the European Union’s [Horizon 2020 research and innovation programme](https://ec.europa.eu/programmes/horizon2020/en) under grant agreement No 731581.
