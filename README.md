@@ -6,15 +6,15 @@ Teaching material for POI data integration &amp; analytics with the SLIPO Workbe
 
 Points of Interest (POIs) are nowadays indispensable to various location-based applications and services. 
 
-Yet, integrating POI data from heterogeneous sources with diverse schemas and formats remains a painstaking, costly, and error-prone task. 
+Yet, integrating POI data from heterogeneous sources with diverse schemas and formats remains a painstaking, costly, and error-prone task. We propose to address these challenges with SLIPO, our open-source software for POI data integration.
 
 In this tutorial:
 
-- We first exhibit current limitations, gaps, and challenges in the POI data integration lifecycle. As no specialized software exists to address these specific challenges, we have implemented the open-source [SLIPO](https://github.com/SLIPO-EU/) system, which harnesses Linked Data technologies ([RDF](https://www.w3.org/RDF/), [OWL](https://www.w3.org/OWL/), [GeoSPARQL](https://www.opengeospatial.org/standards/geosparql)) to handle the inherent geospatial, thematic, and semantic ambiguities of POIs.
+- We first exhibit current limitations, gaps, and challenges in the POI data integration lifecycle ([video](https://drive.google.com/file/d/18LdZByaKAETzHPdfA0zXieZl9stTcd2l/view?usp=sharing)). As no specialized software exists to address these specific challenges, we have implemented the open-source [SLIPO](https://github.com/SLIPO-EU/) system, which harnesses Linked Data technologies ([RDF](https://www.w3.org/RDF/), [OWL](https://www.w3.org/OWL/), [GeoSPARQL](https://www.opengeospatial.org/standards/geosparql)) to handle the inherent geospatial, thematic, and semantic ambiguities of POIs.
 
 - Then, we showcase the [SLIPO Workbench](https://github.com/SLIPO-EU/workbench), our open-source web application that orchestrates and executes POI data integration workflows ([transformation](https://github.com/SLIPO-EU/TripleGeo), [interlinking](https://github.com/SLIPO-EU/LIMES), [fusion](https://github.com/SLIPO-EU/FAGI), [enrichment](https://github.com/SLIPO-EU/deer)) in a user-friendly, interactive, semi-automated, scalable, and quality-assured fashion. 
 
-- Finally, we use [Jupyter notebooks](notebooks) to manage all stages of the integration process via the [SLIPO API](https://app.dev.slipo.eu/docs/webapp-api/index.html), and then explore, mine, and visualize POI data assets using [LOCI](https://github.com/SLIPO-EU/loci), our spatial analytics software.
+- Finally, we use [Jupyter notebooks](notebooks) to manage all stages of the integration process via the [SLIPO API](https://app.dev.slipo.eu/docs/webapp-api/index.html), and then explore, mine, and visualize POI data assets using [LOCI](https://github.com/SLIPO-EU/loci), our spatial analytics software ([video](https://drive.google.com/file/d/1dVRjuGc_4CoB6UTMabd0gUwUvy68g_lo/view?usp=sharing)). This [video](https://drive.google.com/file/d/1fd2WCK8Nj0WDghfwjw70fn4_hV4nG0hp/view?usp=sharing) outlines the software architecture and the basic components of the SLIPO system.
 
 ## Audience
 
